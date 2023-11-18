@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina para domicilios</title>
+    <script src="app.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i|McLaren|Syncopate:400,700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'>
+    <link rel="stylesheet" href="css.css" type="text/css" id="css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1>Carrito de Compras</h1>
+
+        <div class="product">
+            <!-- Detalles del producto aquí -->
+            <button onclick="agregarAlCarrito('product1', 10.00)">Añadir al carrito</button>
+        </div>
+
+        <div class="product">
+            <!-- Detalles del producto aquí -->
+            <button onclick="agregarAlCarrito('product2', 15.00)">Añadir al carrito</button>
+        </div>
+
+        <div class="cart">
+            <h2>Carrito de Compras</h2>
+            <div class="cart-item">
+                <!-- Elementos del carrito aquí -->
+            </div>
+            <p>Total: $<span id="total">0.00</span></p>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <script>
+        let carrito = [];
+
+        function agregarAlCarrito(producto, precio) {
+            // Verificar la autenticación del usuario aquí antes de agregar al carrito
+            if (!usuarioAutenticado) {
+                alert("Debes iniciar sesión para agregar productos al carrito.");
+                return;
+            }
+
+            carrito.push({ producto, precio });
+            actualizarCarrito();
+        }
+
+        // Resto del código JavaScript como se muestra en la respuesta anterior
+    </script>
+</body>
+</html>
